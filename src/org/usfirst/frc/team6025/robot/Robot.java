@@ -172,29 +172,30 @@ public class Robot extends IterativeRobot {
 			    			shooter.set(0);	
 			    			timer.reset();
 					}
-			 		while (isAutonomous() && otonom == 6 ) {
-			      			if (timer.get() < 0.45) {      
-			      				AArobot.drive(0.5, 0.5);
-			      			}
-			  			else {
-			  			  	AArobot.drive(0.0, 0.0); 
-			  			 	otonom ++;
-			  			 	timer.reset();
-			  			}
+				}
+			 	while (isAutonomous() && otonom == 6 ) {
+			      		if (timer.get() < 0.45) {      
+			      			AArobot.drive(0.5, 0.5);
+			      		}
+			  		else {
+			  		  	AArobot.drive(0.0, 0.0); 
+			  		 	otonom ++;
+			  		 	timer.reset();
+			  		}
+				}
+				while (isAutonomous() && otonom == 7 ) {
+					if (timer.get() < 1.5) {      
+						AArobot.drive(0.7, 0);
 					}
-					 while (isAutonomous() && otonom == 7 ) {
-					      	if (timer.get() < 1.5) {      
-					      		AArobot.drive(0.7, 0);
-					      	}
-					  	else {
-					  		  AArobot.drive(0.0, 0.0); 
-					  		 otonom ++;
-					  		 timer.reset();
-					  		 AArobot.stopMotor();
-					  	}
+					else {
+					  	AArobot.drive(0.0, 0.0); 
+					 	otonom ++;
+					 	timer.reset();
+						AArobot.stopMotor();
+					}
 					  		
-					}
-			 	}
+				}
+			 	
 				break;
 	 		}
 			case 2: {
